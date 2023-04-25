@@ -63,3 +63,25 @@ var min = function(list){
     }
     return maxValue;
   };
+
+// Mumbling
+// This time no story, no theory. The examples below show you how to write function accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+// The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+function accum(s) {
+    let lettersArray = s.split("");
+    let finalArray = [];
+  
+    // map each letter to the new array
+    finalArray = lettersArray.map((letter, index) => {
+      // capitalize the first letter of each segment and repeat the letter depending on its index
+      return letter.toUpperCase() + letter.toLowerCase().repeat(index);
+    });
+    // join the elements of the array with a hyphen
+    return finalArray.join('-');
+  }
