@@ -84,4 +84,18 @@ function accum(s) {
     });
     // join the elements of the array with a hyphen
     return finalArray.join('-');
-  }
+}
+
+// List Filtering
+// Create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+function filter_list(l) {
+    let newList = [];
+    l.forEach(item => {
+        if (item < 0) {
+            throw new Error('Only non-negative integers are allowed!')
+        } else if (typeof item == 'number') {
+        newList.push(item);
+        }
+    });
+    return newList;
+}
