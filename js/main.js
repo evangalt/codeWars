@@ -120,6 +120,35 @@ function isIsogram(str){
     }
   }
 
+// Return the complement of each DNA strand (e.g. for string ATCG, return TAGC)
+
+function DNAStrand(dna){
+    //your code here
+    // split the string into individual elements of an array
+    let newArr = dna.split('');
+    console.log(newArr);
+    for (let i = 0; i < newArr.length; i++) {
+      switch (newArr[i]) {
+        case 'A':
+          newArr[i] = 'T';
+          break;
+        case 'T':
+          newArr[i] = 'A';
+          break;
+        case 'C':
+          newArr[i] = 'G';
+          break;
+        case 'G':
+          newArr[i] = 'C';
+          break;
+        default:
+          console.log(`Sorry, we are out of ${expr}.`);
+      }
+    } return newArr.join('');
+  }
+  
+  console.log(DNAStrand('AACGTCA'));
+
 // alternative cleaner example using JS Sets, which filter down to unique values
 function isIsogram(str){
 	return new Set(str.toUpperCase()).size == str.length;
