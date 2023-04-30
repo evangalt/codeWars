@@ -120,6 +120,11 @@ function isIsogram(str){
     }
   }
 
+// alternative cleaner example using JS Sets, which filter down to unique values
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}
+
 // Return the complement of each DNA strand (e.g. for string ATCG, return TAGC)
 
 function DNAStrand(dna){
@@ -150,7 +155,6 @@ function DNAStrand(dna){
   console.log(DNAStrand('AACGTCA'));
 
 // Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
-
 function getSum(a, b) {
     let sum = 0;
     if (a === b) {
@@ -166,7 +170,24 @@ function getSum(a, b) {
     }
 }
 
-// alternative cleaner example using JS Sets, which filter down to unique values
-function isIsogram(str){
-	return new Set(str.toUpperCase()).size == str.length;
+// Alternative solution
+const GetSum = (a, b) => {
+    let min = Math.min(a, b),
+        max = Math.max(a, b);
+    return (max - min + 1) * (min + max) / 2;
 }
+
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+function maskify(cc) {
+    // convert the string into an array
+    let arr = cc.split('');
+    // check if the array length is <= 4 elements
+    if (arr.length <= 4) {
+      // if it is, return the original string;
+      return arr.join('');
+    }  
+    // else loop through the array and change every element to a #, up to arr.length - 4
+    else for (let i  = 0; i < arr.length - 4; i++) {
+      arr[i] = '#';
+    } return arr.join('');
+  }
