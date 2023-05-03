@@ -201,20 +201,24 @@ function maskify(cc) {
 
 // Output
 // Output will consist of a list of string values stating whether the respective member is to be placed in the senior or open category.
-
-  function openOrSenior(data){
+function openOrSenior(data){
     let membershipArray = [];
     // loop through array
     for (let i = 0; i < data.length; i++) {
-      let arrayElement = data[i];
-      // assign first value of each element to age
-      let age = arrayElement[0];
-      // assign second value of each element to handicap
-      let handicap = arrayElement[1];
-      if (age >= 55 && handicap > 7) {
+        let arrayElement = data[i];
+        // assign first value of each element to age
+        let age = arrayElement[0];
+        // assign second value of each element to handicap
+        let handicap = arrayElement[1];
+        if (age >= 55 && handicap > 7) {
         membershipArray.push('Senior');
-      } else membershipArray.push('Open');
+        } else membershipArray.push('Open');
     }
     // return list of string values for "Open" or "Senior"
     return membershipArray;
-  }
+}
+
+// Alternative using .map
+function openOrSenior(data){
+    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+}
