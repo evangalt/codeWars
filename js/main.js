@@ -221,4 +221,22 @@ function openOrSenior(data){
 // Alternative using .map
 function openOrSenior(data){
     return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
-}
+};
+
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+const binaryArrayToNumber = arr => {
+    // flip the array
+    let reversedArray = arr.reverse();
+    let total = 0;
+    console.log(reversedArray);
+    // for every element, if el = 1, el = 2^index
+    reversedArray.forEach((num, index) => {
+        if (num === 1) {
+        let binaryNum = Math.pow(2, index);
+        total += binaryNum;
+        };
+    });
+    return total;
+};
