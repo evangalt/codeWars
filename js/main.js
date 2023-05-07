@@ -257,3 +257,11 @@ function nbYear(p0, percent, aug, p) {
     
     return numYears;
   }
+
+// For integer n, return a string that counts sheep up to n. E.g. if n = 2, return "1 sheep... 2 sheep..."
+
+var countSheep = function (num){
+    let str = "";
+    for(let i = 1; i <= num; i++) { str+= `${i} sheep...`; }
+    return str;
+  }
