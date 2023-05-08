@@ -265,3 +265,10 @@ var countSheep = function (num){
     for(let i = 1; i <= num; i++) { str+= `${i} sheep...`; }
     return str;
   }
+
+// Return the sum of the two smallest numbers in an array
+function sumTwoSmallestNumbers(numbers) {  
+    const sortedNums = numbers.sort((a,b) => a - b);
+    const sum = sortedNums[0] + sortedNums[1];
+    return sum;
+}
