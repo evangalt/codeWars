@@ -272,3 +272,17 @@ function sumTwoSmallestNumbers(numbers) {
     const sum = sortedNums[0] + sortedNums[1];
     return sum;
 }
+
+// You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+function printerError(s) {
+  let sArray = s.split('');
+  let sLength = sArray.length;
+  let numErrors = 0;
+  for (let i = 0; i < sArray.length; i ++) {
+    if (sArray[i] > "m") {
+      numErrors++;
+    }
+  }
+  let errorString = `${numErrors}/${sLength}`;
+  return errorString;
+}
