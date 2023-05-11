@@ -286,3 +286,17 @@ function printerError(s) {
   let errorString = `${numErrors}/${sLength}`;
   return errorString;
 }
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed
+function spinWords(string){
+  let wordsArray = string.split(' ');
+  let sillyArray = [];
+  for (let i = 0; i < wordsArray.length; i++) {
+    let word = wordsArray[i];
+    if (word.length > 4) {
+      word = word.split('').reverse().join('');
+      sillyArray.push(word);
+    } else sillyArray.push(word);
+  }
+  return sillyArray.join(' ');
+}
