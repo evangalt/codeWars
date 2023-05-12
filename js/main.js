@@ -300,3 +300,17 @@ function spinWords(string){
   }
   return sillyArray.join(' ');
 }
+
+// Find the value that appears an odd number of times in the array
+function findOdd(arr) {
+  const counts = {};
+  for (let i = 0; i < arr.length; i++) {
+    const num = arr[i];
+    counts[num] = (counts[num] || 0) + 1;
+  }
+  for (const num in counts) {
+    if (counts[num] % 2 === 1) {
+      return parseInt(num);
+    }
+  }
+}
