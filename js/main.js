@@ -328,3 +328,19 @@ function addBinary(a, b) {
 
   return binary || '0';
 }
+
+// For a total number of bus stops, return the total number of people still on the bus (after each bus stop has unloaded and loaded new passengers)
+var number = function(busStops){
+  // add up all the first elements in each array
+  // add up all the second elements
+  let onBus = 0;
+  let offBus = 0;
+  let diff = 0;
+  busStops.forEach(arr => {
+    onBus += arr[0];
+    offBus += arr[1];
+  })
+  // get the difference of the two
+  diff = onBus - offBus;
+  return diff;
+}
