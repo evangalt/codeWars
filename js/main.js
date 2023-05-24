@@ -314,7 +314,6 @@ function findOdd(arr) {
     }
   }
 }
-
 // Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 // The binary number returned should be a string.
 function addBinary(a, b) {
@@ -328,7 +327,6 @@ function addBinary(a, b) {
 
   return binary || '0';
 }
-
 // For a total number of bus stops, return the total number of people still on the bus (after each bus stop has unloaded and loaded new passengers)
 var number = function(busStops){
   // add up all the first elements in each array
