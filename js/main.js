@@ -360,3 +360,21 @@ const rps = (p1, p2) => {
     } else return "Player 2 won!"
   }
 }
+// find whether the sum of an array's elements is odd or even
+function oddOrEven(array) {
+  let sum = 0;
+  
+  if (array.length === 0) {
+    return 'even';
+  } else {
+    array.forEach(num => {
+      sum += num;
+    });
+
+    if (sum % 2 === 0 || sum % 2 === -0) {
+      return 'even';
+    } else if (sum % 2 === 1 || sum % 2 === -1) {
+      return 'odd';
+    }
+  }
+};
