@@ -391,3 +391,20 @@ function getGrade (s1, s2, s3) {
     return 'D';
   } else return 'F';
 }
+// combine two strings, remove duplicates, and sort them alphabetically
+function longest(s1, s2) {
+  let result = '';
+
+  for (let i = 0; i < s1.length; i++) {
+    if (result.indexOf(s1[i]) === -1) {
+      result += s1[i];
+    }
+  }
+  for (let i = 0; i < s2.length; i++) {
+    if (result.indexOf(s2[i]) === -1) {
+      result += s2[i];
+    }
+  }
+  return result.split('').sort().join('');
+}
+
