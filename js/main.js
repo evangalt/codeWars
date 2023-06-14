@@ -407,4 +407,7 @@ function longest(s1, s2) {
   }
   return result.split('').sort().join('');
 }
-
+// Hogben's centered polygonal numbers
+function rowSumOddNumbers(n) {
+  return Math.pow(n, 3);
+}
