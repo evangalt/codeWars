@@ -411,3 +411,18 @@ function longest(s1, s2) {
 function rowSumOddNumbers(n) {
   return Math.pow(n, 3);
 }
+// find the total points your team scored in a championship tournament with the score format ["1:0","3:1"... etc.]
+function points(games) {
+  let totalPoints = 0;
+  let x = 0;
+  let y = 0;
+  games.forEach(game => {
+    if (game[0] > game[2]) {
+      totalPoints += 3;
+    } else if (game[0] === game[2]) {
+      totalPoints += 1;
+    }
+  })
+  console.log(totalPoints);
+  return totalPoints;
+}
