@@ -426,3 +426,15 @@ function points(games) {
   console.log(totalPoints);
   return totalPoints;
 }
+// change the color of the street light depending on the input
+function updateLight(current) {
+  
+ switch (current) {
+  case 'green':
+    return 'yellow';
+  case 'yellow':
+    return 'red';
+  case 'red':
+    return 'green';
+ }
+}
