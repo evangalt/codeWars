@@ -442,3 +442,13 @@ function updateLight(current) {
 function minMax(arr){
   return [Math.min(...arr), Math.max(...arr)];
 }
+// remove the minimum from an array and return a new array without modifying the original
+function removeSmallest(numbers) {
+  if (numbers === []) {
+    return [];
+  }
+  const min = Math.min(...numbers);
+  const minIndex = numbers.indexOf(min);
+  const newArr = [...numbers.slice(0,minIndex),...numbers.slice(minIndex+1)];
+  return newArr;
+}
