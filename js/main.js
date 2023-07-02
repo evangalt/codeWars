@@ -438,3 +438,7 @@ function updateLight(current) {
     return 'green';
  }
 }
+// return the min and max of an array
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)];
+}
