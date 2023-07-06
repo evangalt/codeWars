@@ -452,3 +452,7 @@ function removeSmallest(numbers) {
   const newArr = [...numbers.slice(0,minIndex),...numbers.slice(minIndex+1)];
   return newArr;
 }
+// if given a square, return its area; otherwise return the polygon's perimeter
+const areaOrPerimeter = function(l , w) {
+  return (l === w) ? l * w : (2 * l + 2 * w);
+};
