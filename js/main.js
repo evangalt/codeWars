@@ -456,3 +456,12 @@ function removeSmallest(numbers) {
 const areaOrPerimeter = function(l , w) {
   return (l === w) ? l * w : (2 * l + 2 * w);
 };
+// return the average of an array of test scores, rounded down
+function getAverage(marks){
+  let sum = 0;
+  let average = 0;
+  for (let i = 0; i < marks.length; i++) {
+    sum += marks[i];
+  }
+  return Math.floor(sum/(marks.length));
+}
