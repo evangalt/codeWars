@@ -444,7 +444,7 @@ function minMax(arr){
 }
 // remove the minimum from an array and return a new array without modifying the original
 function removeSmallest(numbers) {
-  if (numbers === []) {
+  if (numbers.length === 0) {
     return [];
   }
   const min = Math.min(...numbers);
@@ -464,4 +464,24 @@ function getAverage(marks){
     sum += marks[i];
   }
   return Math.floor(sum/(marks.length));
+}
+// find min and max values from an array
+function max(numbers) {
+  let max = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] > max) {
+          max = numbers[i];
+      }
+  }
+  return max;
+}
+
+function min(numbers) {
+  let min = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] < min) {
+          min = numbers[i];
+      }
+  }
+  return min;
 }
